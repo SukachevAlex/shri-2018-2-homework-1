@@ -5,11 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Яндекс Дом</title>
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 
 <body>
+    <div class="page">
+        <header class="header page__header">
+            <div class="header-area">
+                <div class="logo header__logo">
+                    <a class="logo__link" href="#"></a>
+                </div>
+                <div class="menu header__menu">
+                    <span class="menu__link">
+                            <span class="menu__icon"></span>
+                    </span>
+                    <nav class="nav header__nav">
+                        <a class="nav__link nav__link_active" href="#">События</a>
+                        <a class="nav__link" href="#">Сводка</a>
+                        <a class="nav__link" href="#">Устройства</a>
+                        <a class="nav__link" href="#">Сценарии</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main page__main"></main>
+        <footer class="footer page__footer"></footer>
+    </div>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
