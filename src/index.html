@@ -30,12 +30,29 @@
             </div>
         </header>
         <main class="main page__main">
-            <div class="main-inner">
+            <div class="main-area">
                 <h1 class="title main__title">Лента событий</h1>
-                <div class="container"></div>
+                <div class="event__list">
+                    <template class="event__item"></template>
+                </div>
             </div>
         </main>
-        <footer class="footer page__footer"></footer>
+        <footer class="footer page__footer">
+            <div class="footer-area">
+                <div class="menu footer__menu">
+                    <a class="menu__link" href="#">Помощь</a>
+                    <a class="menur__link" href="#">Обратная связь</a>
+                    <a class="menu__link" href="#">Разработчикам</a>
+                    <a class="menu__link" href="#">Условия использования</a>
+                    <a class="menu__link" href="../assets/license.pdf">Авторские права</a>
+                </div>
+                <div class="copyright footer__copyright">
+                    <p class="copyright__text">© 2001–2017 ООО «Яндекс»</p>
+                </div>
+            </div>
+        </footer>
+
+
     </div>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
