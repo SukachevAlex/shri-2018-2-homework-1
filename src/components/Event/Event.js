@@ -1,7 +1,7 @@
 const eventSizes = {
+    's': 'event__item_s',
     'm': 'event__item_m',
-    'l': 'event__item_l',
-    's': 'event__item_s'
+    'l': 'event__item_l'
 };
 
 export function generateEvents(events) {
@@ -20,7 +20,7 @@ export function generateEvents(events) {
 
     let { type, title, source, time, description, icon, size, data } = events;
 
-    eventItem.className = `event__item event__item_${type} event__item_${eventSizes[size]}`;
+    eventItem.className = `event__item event__item_${type} ${eventSizes[size]}`;
     eventIcon.className = `event__icon event__icon_${icon}`;
     eventTitle.textContent = title;
     eventSource.textContent = source;
