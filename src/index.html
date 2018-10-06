@@ -33,7 +33,61 @@
             <div class="main-area">
                 <h1 class="title main__title">Лента событий</h1>
                 <div class="event__list">
-                    <template class="event__item"></template>
+                    <template class="template">
+                        <div class="event__item">
+                            <div class="event__header">
+                                <div class="event__icon"></div>
+                                <div class="event__title"></div>
+                            </div>
+                            <div class="event__main">
+                                <div class="event__source"></div>
+                                <div class="event__time"></div>
+                                <div class="event__description"></div>
+                            </div>
+                            <div class="event__footer">
+                                <div class="event__data">
+                                    <div class="event__graph"></div>
+                                    
+                                    <div class="event__thermal">
+                                        <div class="temperature">
+                                            Температура: <span class="temperature__value"></span> С
+                                        </div>
+                                        <div class="humidity">
+                                            Влажность: <span class="humidity__value"></span>%
+                                        </div>
+                                    </div>
+    
+                                    <div class="player event__player">
+                                        <div class="player__top-line">
+                                            <img class="player__albumcover" src="#" alt="Album cover">
+                                            <div class="player__info">
+                                                <div class="player__track">
+                                                    <span class="player__artist-name"></span> - <span class="player__track-name"></span>
+                                                </div>
+                                                <input class="player__timeline" type="range" min="0" value="10" stype="1">
+                                            </div>
+                                            <div class="player__time"></div>
+                                        </div>
+                                        <div class="player__controlls">
+                                            <button class="player-controll player-controll_back"></button>
+                                            <button class="player-controll player-controll_forward"></button>   
+                                            <input class="player__volume-control" type="range" min="0" max="100" value="80" step="1">
+                                            <div class="player__volume">
+                                                <span class="player__volume-value"></span>%
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="buttons event__buttons"></div>
+
+                                    <picture class="event__image">
+                                        
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
                 </div>
             </div>
         </main>
@@ -51,8 +105,6 @@
                 </div>
             </div>
         </footer>
-
-
     </div>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
