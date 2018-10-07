@@ -1,7 +1,7 @@
 import './style.sass';
-import { generateEvents } from './components/Event/Event';
+import {generateEvents} from './components/Event/Event';
 
-(function() {
+(function () {
     const data = require('./data/events.json');
     const events = data.events;
 

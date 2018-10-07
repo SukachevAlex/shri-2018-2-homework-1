@@ -18,7 +18,7 @@ export function generateEvents(events) {
     const eventDescription = template.querySelector('.event__description');
     const eventData = template.querySelector('.event__data');
 
-    let { type, title, source, time, description, icon, size, data } = events;
+    let {type, title, source, time, description, icon, size, data} = events;
 
     eventItem.className = `event__item event__item_${type} ${eventSizes[size]}`;
     eventIcon.className = `event__icon event__icon_${icon}`;
@@ -58,7 +58,7 @@ function generateData(template, icon, data) {
     const eventImage = template.querySelector('.event__picture');
 
     if (icon === 'stats') {
-        //create graph chart.js
+        // create graph chart.js
     } else {
         eventGraph.remove();
     }
