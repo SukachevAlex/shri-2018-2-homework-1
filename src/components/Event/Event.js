@@ -91,7 +91,6 @@ function generateData(template, icon, data) {
             });
             eventButtons.innerHTML = html;
         }
-
     } else {
         eventButtons.remove();
     }
@@ -113,8 +112,8 @@ function generateData(template, icon, data) {
         `;
 
         eventImage.innerHTML = html;
-
     } else {
+        template.querySelector('.picture__info').remove();
         eventImage.remove();
     }
 }
