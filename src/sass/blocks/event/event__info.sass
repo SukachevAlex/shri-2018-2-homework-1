@@ -54,6 +54,12 @@
     color: inherit
     text-align: left
     margin-left: 17px
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    overflow: hidden    
+    //Fix for FireFox
+    max-height: 3.5rem
 
     @include font-size-fluid(14, 24)
     @include line-height-fluid(17, 28)
