@@ -33,8 +33,8 @@ export function generateEvents(events) {
         template.querySelector('.event__bottom-line').remove();
     }
 
-    if (icon === 'cam') {
-        eventDescription.className = 'event__description event__description_alert';
+    if (size === 'l') {
+        eventDescription.className = 'event__description event__description_big';
     }
 
     if (type === 'critical') {

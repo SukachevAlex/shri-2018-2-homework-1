@@ -43,6 +43,10 @@
     &_kettle
         background-image: url(./img/svg/kettle.svg)
 
+    @media screen and (max-width : 570px)
+        width: 35px
+        height: 35px
+
 .event__title
     font-size: 1.5rem
     line-height: 1.75rem
@@ -59,19 +63,23 @@
     color: inherit
     text-align: left
     font-weight: normal
+    display: flex
+    flex-direction: row
+    justify-content: space-between
 
     @include font-size-fluid(12, 18)
     @include line-height-fluid(14, 21)
 
+.event__item_s
+    .event__main
+        flex-direction: column
+        justify-content: flex-start
 
 .event__source
-    min-width: 200px
-    display: inline-block
     margin-top: 17px
     color: inherit
 
 .event__time
-    display: inline-block
     margin-top: 20px
     &_float_right
         float: right
@@ -90,7 +98,7 @@
     @include font-size-fluid(18, 25)
     @include line-height-fluid(22, 28)
 
-.event__description_alert
+.event__description_big
     font-size: 1.5rem
     line-height: 1.75rem
     font-weight: normal

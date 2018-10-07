@@ -1,8 +1,10 @@
+@import "../helpers/mixins"
+
 .page
     max-width: 1370px
     margin: 0 auto
     display: grid
-    grid-auto-rows: minmax(auto, 90px) 1fr minmax(auto, 64px)
+    grid-auto-rows: minmax(auto, 60px) 1fr minmax(auto, 64px)
 
 .page__header
     width: 100%
@@ -20,12 +22,26 @@
     justify-content: flex-start
     align-items: center
 
+    @include margin-left-fluid(20, 40)
+    @include margin-right-fluid(20, 40)
+    @media screen and (max-width : 570px)
+        justify-content: space-between
+    
+
 .header__menu
     margin-left: 21px
     margin-top: 8px
 
+    @media screen and (max-width : 570px)
+        display: none
+
 .main-area
     margin: 34px 171px 79px
+    @include margin-left-fluid(20, 171)
+    @include margin-right-fluid(20, 171)
+    @media screen and (max-width : 570px)
+        margin-top: 0
+        margin-bottom: 40px
 
 .event__list
     margin-top: 32px
@@ -50,4 +66,25 @@
     flex-wrap: nowrap
     justify-content: space-between
     align-items: center
+
+    @media screen and (max-width : 768px)
+        flex-direction: column
+        align-items: flex-start
+
+.footer__menu
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+
+    @media screen and (max-width : 768px)
+        flex-direction: column
+        justify-content: center
+        order: 2
+
+.event__buttons
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    @media screen and (max-width : 510px)
+        justify-content: space-between
     
