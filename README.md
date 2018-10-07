@@ -12,7 +12,7 @@
 
 ## Ссылка на проект gh-pages
 
-[Ссылка](https://github.com/SukachevAlex/shri-2018-2-homework-1)
+[Ссылка](https://sukachevalex.github.io/shri-2018-2-homework-1/)
 
 ## Основные задачи
 
