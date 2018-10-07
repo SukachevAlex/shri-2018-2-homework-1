@@ -25,7 +25,21 @@ export function generateEvents(events) {
     eventTitle.textContent = title;
     eventSource.textContent = source;
     eventTime.textContent = time;
-    eventDescription.textContent = description;
+    size !== 's' ? eventTime.className = 'event__time event__time_float_right' : '';
+    if (description) {
+        eventDescription.textContent = description;
+
+    } else {
+        template.querySelector('.event__bottom-line').remove();
+    }
+
+    if (icon === 'cam') {
+        eventDescription.className = 'event__description event__description_alert';
+    }
+
+    if (type === 'critical') {
+        template.querySelector('.event__info').className = 'event__info event__info_white';
+    }
 
     if (data) {
         generateData(template, icon, data);
@@ -41,7 +55,7 @@ function generateData(template, icon, data) {
     const eventThermal = template.querySelector('.event__thermal');
     const eventPlayer = template.querySelector('.event__player');
     const eventButtons = template.querySelector('.event__buttons');
-    const eventImage = template.querySelector('.event__image');
+    const eventImage = template.querySelector('.event__picture');
 
     if (icon === 'stats') {
         //create graph chart.js
@@ -50,8 +64,8 @@ function generateData(template, icon, data) {
     }
 
     if (icon === 'thermal') {
-        eventThermal.querySelector('.temperature__value').textContent = data.temperature;
-        eventThermal.querySelector('.humidity__value').textContent = data.humidity;
+        eventThermal.querySelector('.temperature__value').textContent = `${data.temperature} C`;
+        eventThermal.querySelector('.humidity__value').textContent = `${data.humidity}%`;
     } else {
         eventThermal.remove();
     }
@@ -62,7 +76,7 @@ function generateData(template, icon, data) {
         eventPlayer.querySelector('.player__track-name').textContent = data.track.name;
         eventPlayer.querySelector('.player__time').textContent = data.track.length;
         eventPlayer.querySelector('.player__timeline').max = data.track.length;
-        eventPlayer.querySelector('.player__volume-value').textContent = data.volume;
+        eventPlayer.querySelector('.player__volume-value').textContent = `${data.volume}%`;
     } else {
         eventPlayer.remove();
     }
@@ -91,6 +105,7 @@ function generateData(template, icon, data) {
                         ./img/${img}@2x.${ext} 2x, 
                         ./img/${img}@3x.${ext} 3x" />
             <img 
+                class="event__image"
                 src="./img/${data.image}" 
                 srcset="./img/${img}@2x.${ext} 2x, 
                         ./img/${img}@3x.${ext} 3x"
@@ -98,6 +113,7 @@ function generateData(template, icon, data) {
         `;
 
         eventImage.innerHTML = html;
+
     } else {
         eventImage.remove();
     }
