@@ -178,6 +178,7 @@
     line-height: 23px
     color: #000000
     font-weight: bold
+    user-select: none
     &:hover
         box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50)
     @media screen and (max-width : 350px)
@@ -209,5 +210,5 @@
     font-weight: normal
     @include font-size-fluid(12, 18)
     @include line-height-fluid(14, 21)
-    @media screen and (max-width : 768px)
+    @media (-moz-touch-enabled: 1), (pointer:coarse) 
         display: flex
